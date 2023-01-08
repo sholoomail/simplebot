@@ -1,0 +1,11 @@
+services:
+  - type: worker
+    name: simplebot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    repo: https://github.com/sholoomail/simplebot.git
+    branch: main
+    envVars:
+      - key: TOKEN 
+        sync: false    
