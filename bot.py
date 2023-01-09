@@ -1,4 +1,7 @@
 from decouple import config
+token= config("TOKEN")
+
+
 from telegram import Update
 from telegram.ext import Updater , CallbackContext , CommandHandler
 
@@ -14,4 +17,3 @@ def start(update: update , context: callbackcontext) :
 dispatcher.add_handler('start' , start)    
 Updater.start_polling
 
-token= config("TOKEN")
